@@ -1,0 +1,180 @@
+
+.blackout {
+  position:absolute;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  background-color: #000;
+  opacity: 0.8;
+  top:0px;
+  left:0px;
+  z-index: 10;
+}
+
+
+.content_container {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  z-index: 11;
+  visibility: hidden;
+}
+
+
+.content {
+  position:absolute;
+  --s: 800px;
+  width: var(--s);
+  height: calc(var(--s)/1.1547);
+  clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: #DDD;
+  top: 10vh;
+}
+
+
+.main {
+  display:flex;
+  --s: 100px;  /* size  */
+  --m: 0px;    /* margin */
+  width: calc(var(--s)*1.5 + var(--s)*1.5*3);
+  justify-content: center;
+  margin: auto;
+}
+
+.container {
+  font-size: 0; /*disable white space between inline block element */
+}
+
+
+.panel {
+  width: var(--s);
+  height: calc(var(--s)/1.1547);
+  display: inline-block;
+  font-size:initial;
+  /* background-color: transparent; */
+  /* background-color: #BBB; */
+  margin-bottom: calc(0.5*var(--s)/-1.1547);
+  margin-left: calc(0.25*var(--s));
+  margin-right: calc(0.25*var(--s));
+  /* perspective: 1000px; */
+  position: relative;
+  z-index:0;
+}
+
+/* This container is needed to position the front and back side */
+.panel-back {
+  position: absolute;
+  background-color: #BBB;
+  height:100%;
+  width:100%;
+  z-index:1;
+  clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+
+/* This container is needed to position the front and back side */
+.panel-inner {
+  position: absolute;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transform-origin: top left;
+  z-index:2;
+}
+
+
+.panel-inner-active {
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transform: rotateY(70deg);
+  transform-origin: top left;
+}
+
+
+
+
+/* Style the front side */
+.hex {
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  width: var(--s);
+  height: calc(var(--s)/1.1547);
+  clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+
+.pad {
+  display: inline-block;
+  width: calc(var(--s)*0.75);
+  /* background-color: #BBB; */
+  /* height: calc(var(--s)/1.1547); */
+}
+
+.gold {
+  background-color: #D4AF37;
+  opacity: 100%
+}
+
+
+.gold:hover .gold {
+  transform: rotateY(180deg);
+}
+
+.centre {
+  background-color: #000;
+  opacity: 90%
+}
+
+.blank {
+  opacity: 0%;
+}
+
+
+.label_container {
+  height: 100%;
+  wifth: 100%;
+  position: relative;
+}
+
+.label {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 20pt;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.content_label {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 30pt;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 50pt;
+}
+
+h4 {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 20pt;
+}
