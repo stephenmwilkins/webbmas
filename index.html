@@ -19,30 +19,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script>
-  $(document).ready(function(){
-
-    $(".panel-inner").click(function(){
-      $(this).toggleClass('panel-inner-active');
-    });
-
-    $(".content_container").click(function(){
-      $('.content_container').css('visibility','hidden');
-      $('.blackout').css('visibility','hidden');
-    });
-
-    $(".panel-back").click(function(event){
-      $('.blackout').css('visibility','visible');
-      var contentid = 'content' + event.target.id;
-      $('#'+contentid).css('visibility','visible');
-
-    });
-  });
-
-
-  </script>
-
-
+  <script src="index.js"></script>
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,147 +41,16 @@
 
 <div class="blackout"></div>
 
-<div id = "content1" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 1</div>
-    </div>
+<div class = "content_container">
+  <div class = "content"></div>
+  <!-- <div class="label_container">
+    <div id="content_text" class="content_label"></div>
+  </div> -->
+  <div class="credits_text_container">
+  <div id="credits_text" class="credits_label"></div>
   </div>
-</div>
-
-<div id = "content2" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 2</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content3" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 3</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content4" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 4</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content5" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 5</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content6" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 6</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content7" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 7</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content8" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 8</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content9" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 9</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content10" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 10</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content11" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 11</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content12" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 12</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content13" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 13</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content14" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 14</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content15" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 15</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content16" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 16</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content17" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 17</div>
-    </div>
-  </div>
-</div>
-
-<div id = "content18" class = "content_container">
-  <div class="content">
-    <div class="label_container">
-      <div class="content_label">Some content for day 18</div>
-    </div>
+  <div class="content_text_container">
+    <div id="content_text" class="content_label"></div>
   </div>
 </div>
 
@@ -218,7 +64,7 @@
     <div class = "panel"></div>
 
     <div class="panel">
-      <div id = "5" class="panel-back"></div>
+      <div id = "5" class="panel-back" style="background-image:url('imgs/thumbs/images.005.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -236,8 +82,8 @@
     <div class = "panel"></div>
 
     <div class="panel">
-      <div id = "10" class="panel-back"></div>
-      <div class="panel-inner">
+      <div id = "10" class="panel-back" style="background-image:url('imgs/thumbs/images.010.jpeg')"></div>
+      <div id = "day10" class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
             <div class="label">10</div>
@@ -247,11 +93,11 @@
     </div>
 
     <div class="panel">
-      <div id = "11" class="panel-back"></div>
-      <div class="panel-inner">
-        <div class = "hex gold">
-          <div class="label_container">
-            <div class="label">11</div>
+      <div id = "11" class="panel-back" style="background-image:url('imgs/thumbs/images.011.jpeg')"></div>
+      <div id = "11" class="panel-inner">
+        <div id = "11" class = "hex gold">
+          <div id = "11" class="label_container">
+            <div id = "11" class="label">11</div>
           </div>
         </div>
       </div>
@@ -265,7 +111,7 @@
 
     <div class = "pad"></div>
     <div class="panel">
-      <div id = "12" class="panel-back"></div>
+      <div id = "12" class="panel-back" style="background-image:url('imgs/thumbs/images.012.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -276,7 +122,7 @@
     </div>
 
     <div class="panel">
-      <div id = "17" class="panel-back"></div>
+      <div id = "17" class="panel-back" style="background-image:url('imgs/thumbs/images.017.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -287,7 +133,7 @@
     </div>
 
     <div class="panel">
-      <div id = "3" class="panel-back"></div>
+      <div id = "3" class="panel-back" style="background-image:url('imgs/thumbs/images.003.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -304,7 +150,7 @@
     <div class = "panel"></div>
 
     <div class="panel">
-      <div id = "2" class="panel-back"></div>
+      <div id = "2" class="panel-back" style="background-image:url('imgs/thumbs/images.002.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -315,7 +161,7 @@
     </div>
 
     <div class="panel">
-      <div id = "13" class="panel-back"></div>
+      <div id = "13" class="panel-back" style="background-image:url('imgs/thumbs/images.013.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -332,7 +178,7 @@
 
     <div class = "pad"></div>
     <div class="panel">
-      <div id = "1" class="panel-back"></div>
+      <div id = "1" class="panel-back" style="background-image:url('imgs/thumbs/images.001.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -347,7 +193,7 @@
     </div>
 
     <div class="panel">
-      <div id = "8" class="panel-back"></div>
+      <div id = "8" class="panel-back" style="background-image:url('imgs/thumbs/images.008.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -364,7 +210,7 @@
     <div class = "panel"></div>
 
     <div class="panel">
-      <div id = "15" class="panel-back"></div>
+      <div id = "15" class="panel-back" class="panel-back" style="background-image:url('imgs/thumbs/images.015.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -375,7 +221,7 @@
     </div>
 
     <div class="panel">
-      <div id = "18" class="panel-back"></div>
+      <div id = "18" class="panel-back" style="background-image:url('imgs/thumbs/images.018.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -394,7 +240,7 @@
 
     <div class = "pad"></div>
     <div class="panel">
-      <div id = "14" class="panel-back"></div>
+      <div id = "14" class="panel-back" style="background-image:url('imgs/thumbs/images.014.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -405,7 +251,7 @@
     </div>
 
     <div class="panel">
-      <div id = "4" class="panel-back"></div>
+      <div id = "4" class="panel-back" style="background-image:url('imgs/thumbs/images.004.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -416,7 +262,7 @@
     </div>
 
     <div class="panel">
-      <div id = "9" class="panel-back"></div>
+      <div id = "9" class="panel-back" style="background-image:url('imgs/thumbs/images.009.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -433,7 +279,7 @@
     <div class = "panel"></div>
 
     <div class="panel">
-      <div id = "16" class="panel-back"></div>
+      <div id = "16" class="panel-back" style="background-image:url('imgs/thumbs/images.016.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -444,7 +290,7 @@
     </div>
 
     <div class="panel">
-      <div id = "7" class="panel-back"></div>
+      <div id = "7" class="panel-back" style="background-image:url('imgs/thumbs/images.007.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
@@ -464,7 +310,7 @@
     <div class = "panel"></div>
 
     <div class="panel">
-      <div id = "6" class="panel-back"></div>
+      <div id = "6" class="panel-back" style="background-image:url('imgs/thumbs/images.006.jpeg')"></div>
       <div class="panel-inner">
         <div class = "hex gold">
           <div class="label_container">
